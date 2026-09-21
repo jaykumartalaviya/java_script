@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="changeColor()" id="click_event">submit</button>
+    <p id="smart">hello</p>
+
+    <script>
+      const changeColor = () =>{
+        let btn = document.getElementById('click_event');
+        btn.style.background = "red";
+        alert('click')
+      }
+    </script>
+
+    <script>
+      let btn =  document.getElementById('click_event');
+      btn.style.backgroundColor = "green";
+        
+      let pera = document.getElementById('smart');
+      pera.style.color = "yellow";
+    </script>
+    
+</body>
+
+
+</html>

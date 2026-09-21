@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script type="Module">
+
+        import {sum} from "./modules.js";
+        console.log(sum(10,20));
+        
+    </script>
+
+    <script>
+         class Bank {
+  constructor(balance, pin, name) {
+    this.name = name;
+    this.balance = balance;
+    this.pin = pin;
+  }
+
+   deposit(amt){
+    this.balance += amt;
+    console.log(`Your amount diposit suceesfully`);
+  };
+
+  Display(){
+     console.log(`Your total amount is = ${this.balance}`);
+  };
+
+   Withdreaw(amt){
+    this.balance -= amt;
+    console.log(`Your amount is withdreaw`);
+   };
+
+   Display(){
+     console.log(`Your total amount is = ${this.balance}`);
+  };
+}
+ let b = new Bank(1000,1111,"jay");
+b.deposit(500);
+b.Display();
+b.Withdreaw(200);
+b.Display();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="task" type="text" placeholder="enter name">
+    <button onclick="add()">add</button>
+
+    <hr>
+
+    <ul id="list"></ul>
+    <button onclick="deleteItem()">Delete</button>
+
+    <script>
+
+
+        const add = () => {
+            let task = document.getElementById('task').value;
+            let list = document.getElementById('list');
+
+            if (task === "") {
+                alert("plese enter data")
+                return false;
+            }
+            let li = document.createElement('li');
+            let button = document.createElement('button')
+            button.innerHTML = "delate item";
+            li.innerHTML = task;
+            list.appendChild(button);
+            list.appendChild(li);
+
+            button.onclick = () => {
+                li.remove();
+            };
+
+            document.getElementById('task').value = "";
+
+        }
+
+
+        const deleteItem = () => {
+            document.getElementById('list').innerHTML = "";
+
+        }
+
+
+    </script>
+</body>
+
+</html>

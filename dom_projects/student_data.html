@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input id="name" type="text" placeholder="enter name">
+    <input id="age" type="text" placeholder="enter age">
+    <button onclick="addData()"> submit</button>
+
+    <ul id="list"></ul>
+
+</body>
+
+<script>
+
+  function addData(){
+    let name = document.getElementById('name').value; // student name leva mate
+    let age = document.getElementById('age').value;  // student age leva mate
+
+    let li = document.createElement('li')   // list create karva mate 
+   
+
+    li.innerHTML = name + " - " + age;   //  name and age one line ma print karva mate
+    
+
+     let btn = document.createElement('button');   // delate button java thi create karva mate
+     btn.innerHTML = "delate";   // button  nu name aapva mate
+
+     btn.onclick = function(){   // li delate karva mate aa function no use thai
+        li.remove();
+     }
+
+     li.appendChild(btn);  // button ne list ma addd karva mate
+      document.getElementById('list').appendChild(li)   // list ma aavti value print thay
+
+  }
+
+</script>
+</html>
+
+
+ 

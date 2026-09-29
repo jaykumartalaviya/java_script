@@ -7,45 +7,77 @@
 </head>
 
 <body>
-    <input id="task" type="text" placeholder="enter name">
+    <!-- <input id="task" type="text" placeholder="enter name">
     <button onclick="add()">add</button>
 
     <hr>
 
     <ul id="list"></ul>
-    <button onclick="deleteItem()">Delete</button>
+    <button onclick="deleteItem()">Delete</button> -->
 
-    <script>
+   <script>
 
 
-        const add = () => {
-            let task = document.getElementById('task').value;
-            let list = document.getElementById('list');
+    //     const add = () => {
+    //         let task = document.getElementById('task').value;
+    //         let list = document.getElementById('list');
 
-            if (task === "") {
-                alert("plese enter data")
-                return false;
-            }
-            let li = document.createElement('li');
-            let button = document.createElement('button')
-            button.innerHTML = "delate item";
-            li.innerHTML = task;
-            list.appendChild(button);
-            list.appendChild(li);
+    //         if (task === "") {
+    //             alert("plese enter data")
+    //             return false;
+    //         }
+    //         let li = document.createElement('li');
+    //         let button = document.createElement('button')
+    //         button.innerHTML = "delate item";
+    //         li.innerHTML = task;
+    //         list.appendChild(button);
+    //         list.appendChild(li);
 
-            button.onclick = () => {
-                li.remove();
-            };
+    //         button.onclick = () => {
+    //             li.remove();
+    //         };
 
-            document.getElementById('task').value = "";
+    //         document.getElementById('task').value = "";
 
+    //     }
+
+
+    //     const deleteItem = () => {
+    //         document.getElementById('list').innerHTML = "";
+
+    //     }
+
+
+     </script>
+
+
+    <input type="text" id="data" placeholder="enter data">
+    <button onclick="addData()">add</button>
+    <ul id="list"></ul>
+   
+    <script >
+        // function addData  () {
+        //     let data = document.getElementById("data").value;
+        //     let li = document.createElement("li");
+        //     li.innerHTML = data;
+        //     document.getElementById('list').appendChild(li);
+           
+        // }
+
+        // function addData(){
+        //     let data = document.getElementById("data").value;
+        //     let li = document.createElement("li");
+        //     li.innerHTML = data;
+        //     document.getElementById('list').appendChild(li);
+        // }
+
+        function addData(){
+            let data = document.getElementById("data").value;
+            let li = document.createElement("li");
+            li.innerHTML = data;
+            document.getElementById('list').appendChild(li)
         }
 
-
-        const deleteItem = () => {
-            document.getElementById('list').innerHTML = "";
-
-        }
 
 
     </script>

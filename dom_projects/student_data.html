@@ -7,40 +7,71 @@
 </head>
 <body>
     
-    <input id="name" type="text" placeholder="enter name">
+    <!-- <input id="name" type="text" placeholder="enter name">
     <input id="age" type="text" placeholder="enter age">
     <button onclick="addData()"> submit</button>
 
-    <ul id="list"></ul>
+    <ul id="list"></ul> -->
 
-</body>
+
 
 <script>
 
-  function addData(){
-    let name = document.getElementById('name').value; // student name leva mate
-    let age = document.getElementById('age').value;  // student age leva mate
+//   function addData(){
+//     let name = document.getElementById('name').value; // student name leva mate
+//     let age = document.getElementById('age').value;  // student age leva mate
 
-    let li = document.createElement('li')   // list create karva mate 
+//     let li = document.createElement('li')   // list create karva mate 
    
 
-    li.innerHTML = name + " - " + age;   //  name and age one line ma print karva mate
+//     li.innerHTML = name + " - " + age;   //  name and age one line ma print karva mate
     
 
-     let btn = document.createElement('button');   // delate button java thi create karva mate
-     btn.innerHTML = "delate";   // button  nu name aapva mate
+//      let btn = document.createElement('button');   // delate button java thi create karva mate
+//      btn.innerHTML = "delate";   // button  nu name aapva mate
 
-     btn.onclick = function(){   // li delate karva mate aa function no use thai
-        li.remove();
-     }
+//      btn.onclick = function(){   // li delate karva mate aa function no use thai
+//         li.remove();
+//      }
 
-     li.appendChild(btn);  // button ne list ma addd karva mate
-      document.getElementById('list').appendChild(li)   // list ma aavti value print thay
+//      li.appendChild(btn);  // button ne list ma addd karva mate
+//       document.getElementById('list').appendChild(li)   // list ma aavti value print thay
 
-  }
+//   }
+
+
+
+
 
 </script>
+
+<input id="name" type="text" placeholder="enter name" >
+<input id="age" type="text" placeholder="enter age">
+<input type="text"  id="rnumber" placeholder="rollnumber">
+<button onclick="addData()" >submit</button>
+
+<ul id="list"></ul>
+
+<script>
+   function addData(){
+    let name = document.getElementById('name').value;
+    let age = document.getElementById('age').value;
+    let rnumber = document.getElementById('rnumber').value;
+    let li = document.createElement('li');
+    li.innerHTML = name + "-" + age + "-" + rnumber;
+    
+    let btn = document.createElement('button');
+    btn.innerHTML = "delate";
+    btn.onclick = function(){
+        li.remove()
+    }
+    li.appendChild(btn);
+    document.getElementById('list').appendChild(li);
+   }
+</script>
+
 </html>
+</body>
 
 
  

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="number" type="text" placeholder="enter month number">
+    <input id="name" type="text" placeholder="enter month name">
+    <button onclick="subData()">submit</button>
+    <ul id="list"></ul>
+
+    <script>
+        function subData(){
+        let number = document.getElementById('number').value;
+        let name = document.getElementById('name').value;
+        let li = document.createElement('li');
+        li.innerHTML = number + "-" + name;
+        let btn = document.createElement('button')
+        btn.innerHTML = "delate";
+
+        btn.onclick = function(){
+            li.remove()
+        }
+        li.appendChild(btn);
+        document.getElementById('list').appendChild(li);
+        }
+    </script>
+</body>
+</html>

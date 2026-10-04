@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <h1 id="cnt"></h1>
+    <button onclick="Increment()">+</button>
+
+    <script>
+        // let no = 0;
+        // const Increment = () => {
+        //     no++;
+        // document.getElementById('cnt').innerHTML = `Count :- ${no}`;
+            
+        // }
+
+        // document.getElementById('cnt').innerHTML = `Count :- ${no}`;
+
+
+         let no = 0;
+
+        const updateCount = (no) => {
+            document.getElementById('cnt').innerHTML = `Count :- ${no}`
+        }
+        updateCount(no)
+        const Increment = () => {
+            no++;
+            updateCount(no)
+        }
+
+    </script>
+
+
+</body>
+</html>

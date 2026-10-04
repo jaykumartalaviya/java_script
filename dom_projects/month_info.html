@@ -6,26 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    <input id="number" type="text" placeholder="enter month number">
-    <input id="name" type="text" placeholder="enter month name">
-    <button onclick="subData()">submit</button>
-    <ul id="list"></ul>
+   <input type="text" placeholder="enter month" id="month">
+   <input type="text" placeholder="enter month number" id="number">
+   <button onclick="addData()">submit</button>
+   <ul id="list"></ul>
 
-    <script>
-        function subData(){
+   <script>
+    function addData(){
+        let month = document.getElementById('month').value;
         let number = document.getElementById('number').value;
-        let name = document.getElementById('name').value;
         let li = document.createElement('li');
-        li.innerHTML = number + "-" + name;
-        let btn = document.createElement('button')
-        btn.innerHTML = "delate";
+        li.innerHTML = month + '-' + number;
 
-        btn.onclick = function(){
-            li.remove()
-        }
-        li.appendChild(btn);
+        let btn = document.crea
         document.getElementById('list').appendChild(li);
-        }
-    </script>
+    }
+   </script>
+    
 </body>
 </html>
